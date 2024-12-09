@@ -44,3 +44,11 @@ console.log(promiseWithoutAsync);
 // 3. processWithAwait 이 호출된 동안 인터프리터는 이게 비동기함수인걸 알고 바로 다음줄인 console.log("await 있을 때 : "); 로 넘어가버림.
 // 1. console.log("await 있을 때 : ") 실행 -> "await 있을 때 : "
 // 2.
+
+
+array = [2, 32, 3, 644, 21];
+
+array.sort((a, b) => a - b);
+
+console.log(array);
+
