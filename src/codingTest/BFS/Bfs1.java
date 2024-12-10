@@ -25,14 +25,30 @@ package codingTest.BFS;
 * */
 
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Bfs1 {
+    static int n, m;
+    static int[][] map;
+    static boolean[][] chk;
+
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+        m = sc.nextInt();
+
+        map = new int[n][m];
+
+        // 입력값으로 map 생성
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                map[i][j] = sc.nextInt();
+            }
+        }
+
 
 
     }
 
-    public static void result(int m, int n, int[][] map) {
-
-
-    }
 }
