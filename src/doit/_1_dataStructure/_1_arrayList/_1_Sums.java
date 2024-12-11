@@ -2,8 +2,9 @@ package doit._1_dataStructure._1_arrayList;
 
 
 import java.util.Scanner;
-/* https://www.acmicpc.net/problem/11720 */
-/*
+/* https://www.acmicpc.net/problem/11720
+* https://www.inflearn.com/courses/lecture?courseId=330462&unitId=148338&tab=curriculum
+*
 *
 * 1. 아이디어
 * - 입력
