@@ -31,6 +31,8 @@ public class _4_TwoPointer {
         int sum = 1;
         int count = 1;
 
+        // end 가 n 이면 가능한 유일한 경우는 start 도 n 이어야.
+        // 하지만 그 경우는 첨에 count 를 1로 초기화해서 미리 고려해놨기 때문에 end가 n인 경우까지는 가지 않음.
         while (end != n) {
             if (sum < n) {
                 end++;
@@ -49,6 +51,31 @@ public class _4_TwoPointer {
 
         sc.close();
 
+    }
+
+    static void 내풀이복습(){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        int sum = 1;
+        int cnt = 1;
+        int start = 1;
+        int end = 1;
+        while (end != n) {
+            if (sum < n) {
+                end++;
+                sum += end;
+            } else if (sum > n) {
+                sum -= start;
+                start++;
+            } else {
+                cnt++;
+                end++;
+                sum += end;
+            }
+        }
+        System.out.println(cnt);
+        sc.close();
     }
 
 
