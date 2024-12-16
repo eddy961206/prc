@@ -50,20 +50,22 @@ public class _5_SlidingWindow {
             if (checkArr[i] == 0) checkSecret++; // 조건에 0인거면 없어도 되니까 바로 조건만족 1 증가시킴
         }
 
+        // 첫번째 윈도우 체크 (수동)
         for (int i = 0; i < p; i++) {
             Add(arr[i]);
         }
 
         if (checkSecret == 4) result++;
 
-        // 슬라이딩 윈도우
+        // 반복 - 윈도우 슬라이딩하며 조건(checkArr) 에 맞는지 확인 - 맞으면 checkSecret++.
         for (int i = p; i < s; i++) {
             int j = i - p; // p 간격을 유지한채 이동.
             // 단 맨 끝에가서도 p간격 유지돼서 끝나야 하므로 끝 인덱스 기준으로 i(끝), i-p(시작) 로.
             // 간격이 p인 윈도우 => 끝인덱스(i) - 시작인덱스(i-p) = p
             // 즉 시작이 j, 끝이 i. 통상 의미의 반대가 됨
-            Add(arr[i]); // 끝에것만 추가.
-            Remove(arr[j]);
+            Add(arr[i]); // 끝에건 새로 더하고
+            Remove(arr[j]); // 시작은 빼고
+            // 중간에 있던건 그대로 있음
             if (checkSecret == 4) result++;
         }
         System.out.println(result);
